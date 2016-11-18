@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Settings>
   <EmailSettings>	
-    <SMTPServer>mobile.bdr.de</SMTPServer>
+    <SMTPServer>smtp.mcsmemail.de</SMTPServer>
     <SMTPPort>25</SMTPPort>
-    <MailFrom>postmaster@bdr.de</MailFrom>
-    <MailTo>thomas.stensitzki@bdr.de</MailTo>
+    <MailFrom>postmaster@mcsmemail.de</MailFrom>
+    <MailTo>postmaster@mcsmemail.de</MailTo>
   </EmailSettings>
   <OtherSettings>
 	<!-- MobileDeviceLimit defines the overall threshold of mobile devices for a single user to synchronize. Default is 5. -->
