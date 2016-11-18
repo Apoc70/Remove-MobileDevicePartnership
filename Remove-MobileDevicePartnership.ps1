@@ -2,23 +2,26 @@
     .SYNOPSIS
     Remove Exchange Server 2013+ Mobile Device Partnerships 
    
-    Sebastian Rubertus / Thomas Stensitzki
+    Thomas Stensitzki / Sebastian Rubertus
 	
     THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE 
     RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
     Send comments and remarks to: support@granikos.eu
 	
-    Version 2.0, 2016-11-17
+    Version 1.0, 2016-11-17
  
     .LINK  
     GitHub
+    https://github.com/Apoc70/Remove-MobileDevicePartnership
 
     .LINK
     TechNet
 
+
     .LINK
     Blog
+    https://www.granikos.eu/en/justcantgetenough/PostId/262/cleanup-mobile-device-partnerships
   	
     .DESCRIPTION
 
@@ -45,7 +48,7 @@
     .\Remove-MobileDevicePartnership.ps1 
 
     .EXAMPLE
-    Remove old mobile device partnerships without sending a report email
+    Remove old mobile device partnerships and send a report email
 
     .\Remove-MobileDevicePartnership.ps1 -SendMail
   	
@@ -55,8 +58,6 @@ param(
   [parameter()]
   [switch]$SendMail
 )
-# for debug only
-$SendMail = $true
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $logfile = ('{0}\{1}_MobileDeviceCleanup.log' -f $ScriptDir, (Get-Date -format yyyy-MM-dd_HH-mm-ss))
@@ -113,7 +114,7 @@ Write-Host
 # Iterate each User Mailbox
 ForEach ($Mailbox in $Mailboxes)
 {
-  Write-Progress -Activity "Processing mailboxes Mailbox ($Counter/$NumberOfMailboxes) ($($MobileDeviceLimit)|$($AgedDeviceLimit)|$($LastSync)) | Failed: $($FailedUsers)" -Status "Mailbox: $($Mailbox.DisplayName)" -PercentComplete (($Counter/$NumberOfMailboxes)*100)
+  Write-Progress -Activity "Processing mailboxes Mailbox ($Counter/$NumberOfMailboxes) | Failed: $($FailedUsers)" -Status "Mailbox: $($Mailbox.DisplayName)" -PercentComplete (($Counter/$NumberOfMailboxes)*100)
 
   $MailboxAlias = $Mailbox.Alias
 
