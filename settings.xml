@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Settings>
+  <EmailSettings>	
+    <SMTPServer>mobile.bdr.de</SMTPServer>
+    <SMTPPort>25</SMTPPort>
+    <MailFrom>postmaster@bdr.de</MailFrom>
+    <MailTo>thomas.stensitzki@bdr.de</MailTo>
+  </EmailSettings>
+  <OtherSettings>
+	<!-- MobileDeviceLimit defines the overall threshold of mobile devices for a single user to synchronize. Default is 5. -->
+	<MobileDeviceLimit>5</MobileDeviceLimit>
+
+	<!-- AgedDeviceLimit defines the threshold of allowed aged devices for a single user to be removed. Default is 1. -->
+	<AgedDeviceLimit>1</AgedDeviceLimit>
+
+	<!-- Time threshold in days to identify old mobile devices, Be default devices not synchronized for 150 days will be removed -->
+    <LastSyncDays>150</LastSyncDays>
+  </OtherSettings>
+</Settings>
