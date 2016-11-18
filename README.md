@@ -1,0 +1,2 @@
+# Remove-MobileDevicePartnership
+Remove-MobileDevicePartnership
