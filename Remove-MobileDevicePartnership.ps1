@@ -10,7 +10,7 @@
     Send comments and remarks to: support@granikos.eu
 	
     Version 1.1, 2017-02-22
- 
+     
     .LINK  
     https://www.granikos.eu/en/justcantgetenough/PostId/262/cleanup-mobile-device-partnerships
   	
